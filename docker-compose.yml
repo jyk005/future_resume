@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  # Pyramid Web Server
+  web-server:
+    build:
+      context: ./server
+    ports:
+      - 8000:1234       # Web server port
+    volumes:
+      - ./server/src:/app
+    container_name: future-resume-server
